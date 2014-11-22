@@ -13,6 +13,6 @@ app.get('/api/0.1/compute/:julia_expr', function(req, res){
 	res.json({'result': julia_expr_result});
 });
 
-var server = app.listen(3000, function() {
+var server = app.listen(3000, '0.0.0.0', function() {
 console.log('The JuliaDroid backend is now listening on port %d', server.address().port);
 });
